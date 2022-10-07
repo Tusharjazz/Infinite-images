@@ -1,0 +1,74 @@
+body {
+  margin: 0;
+  padding: 0;
+}
+.gallery {
+  max-width: 1200px;
+  margin: 0 auto;
+  display: grid;
+  gap: 0.5rem;
+  grid-template-columns: repeat(auto-fit, minmax(20vw, 1fr));
+}
+.thumbnail {
+  border: 1px solid #000;
+  color: white;
+  height: 6rem;
+}
+.thumbnail > img {
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+  cursor: pointer;
+}
+.lightbox {
+  width: 100%;
+  height: 100%;
+  position: fixed;
+  top: 0;
+  left: 0;
+  background: #000000cc;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.lightbox > img {
+  width: 80%;
+  height: 80%;
+  object-fit: contain;
+}
+.close-lightbox {
+  top: 0.5rem;
+  right: 0.5rem;
+}
+.left-lightbox {
+  top: 50%;
+  left: 0.5rem;
+}
+.right-lightbox {
+  top: 50%;
+  right: 0.5rem;
+}
+.lightbox-button {
+  position: absolute;
+  background: #fff;
+  width: 1.5rem;
+  height: 1.5rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 50%;
+  cursor: pointer;
+  z-index: 999;
+}
+.loading {
+  z-index: 999;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: #000000cc;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
